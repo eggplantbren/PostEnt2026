@@ -4,6 +4,9 @@
 #include "DNest4/code/DNest4.h"
 #include <ostream>
 
+namespace PostEnt2026
+{
+
 class MyModel
 {
     private:
@@ -28,6 +31,8 @@ class MyModel
         // Return string with column information
         std::string description() const;
 };
+
+} // namespace
 
 #endif
 

@@ -1,6 +1,9 @@
 #include "MyModel.h"
 #include "DNest4/code/DNest4.h"
 
+namespace PostEnt2026
+{
+
 MyModel::MyModel()
 {
 
@@ -33,3 +36,4 @@ std::string MyModel::description() const
     return std::string("");
 }
 
+} // namespace
