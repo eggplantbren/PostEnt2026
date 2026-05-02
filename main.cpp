@@ -14,8 +14,7 @@ using Data =   Examples::BinomialData;
 int main(int argc, char** argv)
 {
     // Separate RNG for generating (truth, data) pairs.
-    DNest4::RNG rng;
-    rng.seed(time(0));
+    DNest4::RNG rng(time(0));
 
     std::system("rm logzs.txt logzs2.txt");
     std::fstream fout("truths.txt", std::ios::out);
