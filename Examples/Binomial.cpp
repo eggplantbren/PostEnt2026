@@ -21,7 +21,7 @@ double BinomialParams::perturb(DNest4::RNG& rng)
     return 0.0;
 }
 
-double BinomialParams::log_kernel(const BinomialParams& other)
+double BinomialParams::log_kernel(const BinomialParams& other) const
 {
     static const double logZ = -0.5*std::log(2.0*M_PI*pow(Options::tolerance, 2));
     double logf = 0.0;

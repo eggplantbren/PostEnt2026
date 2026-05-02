@@ -80,7 +80,10 @@ double MyModel<Params, Data>::perturb(DNest4::RNG& rng)
 template<typename Params, typename Data>
 double MyModel<Params, Data>::log_likelihood() const
 {
-    return data->log_likelihood(params);
+    double logl = data->log_likelihood(params);
+    if(truth != nullptr)
+        logl += params.log_kernel(*truth);
+    return logl;
 }
 
 template<typename Params, typename Data>

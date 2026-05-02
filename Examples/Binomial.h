@@ -26,7 +26,7 @@ class BinomialParams
         double perturb(DNest4::RNG& rng);
 
         // Gaussian kernel
-        double log_kernel(const BinomialParams& other);
+        double log_kernel(const BinomialParams& other) const;
 
         // Print
         void print(std::ostream& out) const;
