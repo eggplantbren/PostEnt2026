@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 logzs  = np.atleast_1d(np.loadtxt("logzs.txt"))
 logzs2 = np.atleast_1d(np.loadtxt("logzs2.txt"))
@@ -14,3 +15,10 @@ sd   = np.std(diffs, ddof=1)
 sem  = sd/np.sqrt(len(diffs))
 print(f"Mean diff = {mean}, SD of diffs = {sd}.")
 print(f"H = {mean} +- {sem}.")
+
+truths = np.loadtxt("truths.txt")
+if truths.ndim == 1:
+    truths = truths[:, None]
+truths = truths[0:len(diffs),0]
+plt.plot(truths, diffs, ".", alpha=0.3)
+plt.show()
