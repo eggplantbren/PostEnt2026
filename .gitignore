@@ -1,1 +1,13 @@
 main
+__pycache__/
+levels.txt
+log_prior_weights.txt
+main_python
+my-venv/
+posterior_sample.txt
+sample.txt
+sample_info.txt
+sampler_state.txt
+truths.txt
+weights.txt
+
