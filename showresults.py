@@ -1,7 +1,7 @@
 import numpy as np
 
-logzs = np.loadtxt("logzs.txt")
-logzs2 = np.loadtxt("logzs2.txt")
+logzs  = np.atleast_1d(np.loadtxt("logzs.txt"))
+logzs2 = np.atleast_2d(np.loadtxt("logzs2.txt"))
 
 # Truncate to equal length
 logzs = logzs[0:len(logzs2)]
