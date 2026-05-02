@@ -10,4 +10,5 @@ sample_info.txt
 sampler_state.txt
 truths.txt
 weights.txt
-
+logzs.txt
+logzs2.txt
