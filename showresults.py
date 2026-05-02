@@ -9,6 +9,8 @@ logzs = logzs[0:len(logzs2)]
 # Calculate entropy
 diffs = logzs - logzs2
 print(f"Number of runs = {len(diffs)}.")
-H = np.mean(diffs)
-sem = np.std(diffs, ddof=1)/np.sqrt(len(diffs))
-print(f"H = {H} +- {sem}.")
+mean = np.mean(diffs)
+sd   = np.std(diffs, ddof=1)
+sem  = sd/np.sqrt(len(diffs))
+print(f"Mean diff = {mean}, SD of diffs = {sd}.")
+print(f"H = {mean} +- {sem}.")
