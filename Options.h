@@ -59,7 +59,7 @@ private:
                 if (key == "num_runs")
                     Values::num_runs = std::stoi(val);
                 else if (key == "tolerance")
-                    Values::tolerance = std::stoi(val);
+                    Values::tolerance = std::stod(val);
             }
         }
     };
