@@ -19,6 +19,6 @@ print(f"H = {mean} +- {sem}.")
 truths = np.loadtxt("truths.txt")
 if truths.ndim == 1:
     truths = truths[:, None]
-truths = truths[0:len(diffs),0]
-plt.plot(truths, diffs, ".", alpha=0.3)
+truths = truths[0:len(diffs),:]
+plt.plot(truths[:,0], diffs, ".", alpha=0.3)
 plt.show()
