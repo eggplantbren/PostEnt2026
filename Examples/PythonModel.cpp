@@ -102,17 +102,6 @@ void PythonModelParams::print(std::ostream& out) const
         out << params[i] << ' ';
 }
 
-void PythonModelParams::csv_header(std::ostream& out)
-{
-    for(int i=0; i<size; ++i)
-    {
-        out << "params[" << i << "]";
-        if(i < (size-1))
-            out << ',';
-    }
-}
-
-
 
 void PythonModelParams::prior_transform()
 {

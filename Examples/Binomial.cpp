@@ -34,11 +34,6 @@ void BinomialParams::print(std::ostream& out) const
     out << theta;
 }
 
-void BinomialParams::csv_header(std::ostream& out)
-{
-    out << "theta";
-}
-
 BinomialData::BinomialData(const BinomialParams& params, DNest4::RNG& rng)
 {
     x = 0;

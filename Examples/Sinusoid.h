@@ -30,7 +30,6 @@ class SinusoidParams
 
         // Print
         void print(std::ostream& out) const;
-        static void csv_header(std::ostream& out);
 
         friend class SinusoidData;
 

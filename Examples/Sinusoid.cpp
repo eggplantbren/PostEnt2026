@@ -60,11 +60,6 @@ void SinusoidParams::print(std::ostream& out) const
     out << A << ' ' << T << ' ' << phi;
 }
 
-void SinusoidParams::csv_header(std::ostream& out)
-{
-    out << "theta";
-}
-
 SinusoidData::SinusoidData(const SinusoidParams& params, DNest4::RNG& rng)
 :t(N), y(N)
 {
